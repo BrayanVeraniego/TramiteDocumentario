@@ -327,11 +327,11 @@
                                           <div class="col-12 ">
                                              <div class="input-group input-group-sm mb-1">
                                                 <div class="input-group-prepend bg-ucsm px-2">
-                                                   ID de Requerimiento
+                                                   ID de Pago
                                                 </div>
-                                                <input type="text" name="paData[CIDREQU]" value="{$saData['CIDREQU']}" placeholder="NUEVO REQ." class="form-control" readonly>
+                                                <input type="text" name="paData[CIDREQU]" value="{$saData['CIDREQU']}" placeholder="NUEVO PAG." class="form-control" readonly>
                                                 <div class="input-group-prepend bg-ucsm px-2">
-                                                   Tipo de Requerimiento
+                                                   Tipo de Pago
                                                 </div>
                                                 <select name="paData[CTIPO]" class="custom-select custom-select-sm">
                                                    {foreach from=$saTipReq item=i}
@@ -346,18 +346,7 @@
                                                       <option value="{$i['CCODIGO']}" {if $saData['CMONEDA'] eq $i['CCODIGO']}selected{/if}>{$i['CDESCRI']}</option>
                                                    {/foreach}
                                                 </select>
-                                                <div class="input-group-prepend bg-ucsm px-2">
-                                                   Compra Directa
-                                                </div>
-                                                <div class="form-check mx-2 d-flex align-items-center">
-                                                   <input type="checkbox" name="paData[CCOMDIR]" id="pcComDir" value="S" {if $saData['CCOMDIR'] eq 'S'} checked {/if} onchange="f_showCompraDirecta()" class="form-check-input position-static">
-                                                </div>
-                                                <div class="input-group-prepend bg-ucsm px-2">
-                                                   Almacén
-                                                </div>
-                                                <div class="form-check mx-2 d-flex align-items-center">
-                                                   <input type="checkbox" name="paData[CDESTIN]" id="pcDestin" value="F" {if $saData['CDESTIN'] eq 'F'} checked {/if} onchange="f_hideCompraDirecta(); f_EditarPrecio();" class="form-check-input position-static">
-                                                </div>
+                                                
                                              </div>
 
                                              <div class="input-group input-group-sm mb-1">
@@ -368,44 +357,16 @@
                                              </div>
                                              <div class="input-group input-group-sm mb-1">
                                                 <div class="input-group-prepend bg-ucsm px-2">
-                                                   Actividad
+                                                   Monto Ingreso
                                                 </div>
-                                                <select name="paData[CIDACTI]" class="selectpicker form-control form-control-sm col-8" data-live-search="true">
-                                                   {foreach from = $saActivi item = i}
-                                                      {*<option value="{$i['CIDACTI']}">{$i['CDESCRI']}</option>*}
-                                                      <option value="{$i['CIDACTI']}" {if $i['CIDACTI'] eq $saData['CIDACTI']} selected {/if}>{$i['CDESCRI']}</option>
-                                                   {/foreach}
-                                                </select>
+                                                <input type="text" id="pcDescri" name="paData[CDESCRI]" value="{$saData['CDESCRI']}" class="form-control uppercase" onkeyup="UpperCaseF(this);" autofocus required>
                                              </div>
-                                             <div class="row" id="divComDir">
-                                                <div class="col-12">
-                                                   <div class="input-group input-group-sm mb-1">
-                                                      <div class="input-group-prepend bg-ucsm px-2">
-                                                         Nro. RUC
-                                                      </div>
-                                                      <input type="text" id="pcNroRuc" name="paData[CNRORUC]" value="{$saData['CNRORUC']}" maxlength="11" class="form-control" required>
-                                                      <div class="input-group-append">
-                                                         <button id="btn_buscarRUC" tabindex="-1" class="btn btn-outline-primary" onclick="f_buscarRUC();">Buscar</button>
-                                                      </div>
-                                                      <div class="input-group-prepend bg-ucsm px-2">
-                                                         Razón Social
-                                                      </div>
-                                                      <input type="text" id="pcRazSoc" name="paData[CRAZSOC]" value="{$saData['CRAZSOC']}" class="form-control w-25" placeholder="RUC INVALIDO" required readonly>
-                                                      <div class="input-group-prepend bg-ucsm px-2">
-                                                         Nro. Factura
-                                                      </div>
-                                                      <input type="text" id="pcNroCom" name="paData[CNROCOM]" value="{$saData['CNROCOM']}" class="form-control" required>
-                                                      <div class="input-group-prepend bg-ucsm px-2">
-                                                         Monto
-                                                      </div>
-                                                      <input type="text" id="pnMonto" name="paData[NMONTO]" value="{$saData['NMONTO']}" class="form-control" onblur="f_validateNumber(this, 2);" required>
-                                                      <div class="input-group-prepend bg-ucsm px-2">
-                                                         Fecha Compra
-                                                      </div>
-                                                      <input type="text" id="pdFecCom" name="paData[DFECCOM]" value="{$saData['DFECCOM']}" class="form-control datepicker" required readonly>
-                                                   </div>
+                                             <div class="input-group input-group-sm mb-1">
+                                                <div class="input-group-prepend bg-ucsm px-2">
+                                                   Monto
                                                 </div>
-                                             </div>
+                                                <input type="text" id="pcDescri" name="paData[CDESCRI]" value="{$saData['CDESCRI']}" class="form-control uppercase" onkeyup="UpperCaseF(this);" autofocus required>
+                                             </div>  
                                           </div>          
                                        </div>
                                        <div class="form-row">
