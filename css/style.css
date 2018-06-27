@@ -1,0 +1,123 @@
+*
+{
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+html {
+   height: 100%;
+   box-sizing: border-box;
+}
+body {
+   position: relative;
+   margin: 0;
+   padding-bottom: 6rem;
+   min-height: 100%;
+   color: #5a5a5a;
+   padding-top: 4.5rem;
+}
+main {
+   overflow: auto;
+   margin-bottom: 50px;
+}
+.bg-ucsm{
+   background-color: #245433;
+   color: #ffffff;
+}
+.bg-sc-ucsm{
+   background-color: #f8aa1a;
+   color: #fff;
+}
+table thead{ 
+   background-color: #f8aa1a; 
+   color: #fff; 
+} 
+.footer {
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   padding: 1rem;
+}
+.a-ucsm:link{
+   color: #245433;
+}
+.no-resize{
+   resize: none;
+}
+.uppercase{
+   text-transform: uppercase;
+}
+
+.mh-50{
+   max-height: 50vh;
+   overflow-y: scroll;
+}
+
+.text-11{
+   font-size: 11px;
+}
+
+.text-14{
+   font-size: 14px;
+}
+
+.mw-80 {
+   max-width: 80% !important;
+}
+
+.mw-60 {
+   max-width: 60% !important;
+}
+
+.text-span {
+  display: block;
+  width: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #ECECEC;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    padding-bottom: 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.table-fer{
+    max-width: 450px;
+}
