@@ -36,7 +36,19 @@ if (false) {
 } elseif (@$_REQUEST['Id'] == 'cambiarCentroCosto') {
    fxAxCambiarCentroCosto();
 } else {
-   $_SESSION['paMoneda']=null;/////////////////////
+   //$_SESSION['paMoneda']=null;/////////////////////
+   $_SESSION['paMoneda']=null;
+   $_SESSION['GCCENCOS']=null;/////////////////////
+   $_SESSION['GCDESCCO']=null;
+   $_SESSION['GCNOMBRE']=null;
+   $_SESSION['paMoneda']=null;
+   $_SESSION['paRequer']=null;
+   $_SESSION['paTipReq']=null;
+   $_SESSION['paCenCos']=null;
+   $_SESSION['paActivi']=null;
+   $_SESSION['pnRango']=null;
+   $_SESSION['paData']=null;
+   $_SESSION['paDatos']=null;
    fxInit();
 }
 
@@ -223,7 +235,7 @@ function fxScreen($p_nBehavior) {
    $loSmarty->assign('saData', $_SESSION['paData']);
    $loSmarty->assign('saDatos', $_SESSION['paDatos']);
    $loSmarty->assign('snBehavior', $p_nBehavior);
-   $loSmarty->display('Plantillas/Erp1110.tpl');
+   $loSmarty->display('Plantillas/tofel.tpl');
 }
 
 function axPrintDetalles() {
